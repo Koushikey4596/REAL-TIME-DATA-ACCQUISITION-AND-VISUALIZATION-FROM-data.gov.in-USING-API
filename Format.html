@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>05082019</title>
+  
+    <link rel='stylesheet' href='https://cdn3.devexpress.com/jslib/18.2.7/css/dx.common.css'>
+<link rel='stylesheet' href='https://cdn3.devexpress.com/jslib/18.2.7/css/dx.light.css'>
+  <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+
+<body>
+  <head>
+  <title></title>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=visualization&amp;key=AIzaSyAe5eBMgEJs3yYvuwGveXF1eB9LEDmD3wM&amp;unused-google-fusiontables"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo">API Data.Gov.in</a>
+  <div class="header-right">
+    <a href="https://data.gov.in/" >Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+ </div>
+  <div class="dx-viewport demo-container">
+  <div class="form">
+    <div id="simple-treeview"></div>
+    <div id="product-details" class="hidden">
+      <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'att_table')" id="defaultOpen">Table</button>
+  <button class="tablinks" onclick="openCity(event, 'Map')">Map</button>
+</div>
+      <div id="att_table" class="tabcontent"></div>
+      <div id="Map" class="tabcontent">
+        <div id = "map1"></div>
+     </div>
+  <script>
+ function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<body>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdn3.devexpress.com/jslib/18.2.7/js/dx.all.js'></script>
+  <script  src="js/index.js"></script>
+</body>
+</html>
